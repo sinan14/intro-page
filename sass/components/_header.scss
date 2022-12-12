@@ -9,8 +9,8 @@
   @include respond(phone) {
     margin: 0;
     padding: 2.4rem 0 0 2.4rem;
-
     width: 100vw;
+    background-color: red;
   }
   .company_name {
     color: $Almost-Black;

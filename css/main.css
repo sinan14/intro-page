@@ -38,7 +38,8 @@ main {
 }
 @media only screen and (max-width: 37.5em) {
   main {
-    margin: 7% 0 10%;
+    margin: 0;
+    background: yellow;
   }
 }
 
@@ -70,6 +71,7 @@ body {
     margin: 0;
     padding: 2.4rem 0 0 2.4rem;
     width: 100vw;
+    background-color: red;
   }
 }
 .header .company_name {
