@@ -1,0 +1,256 @@
+/*
+  0 - 600px:      Phone
+  600 - 900px:    Tablet portrait
+  900 - 1200px:   Tablet landscape
+  [1200 - 1800] is where our normal styles apply
+  1800px + :      Big desktop
+
+  $breakpoint arguement choices:
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+
+  ORDER: Base + typography > general layout + grid > page layout > components
+
+  1em = 16px
+  */
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0 7% 10% 10%;
+}
+@media only screen and (max-width: 37.5em) {
+  main {
+    margin: 7% 0 10%;
+  }
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.u-margin-right-small {
+  margin-right: 0.6rem;
+}
+
+.u-margin-left-medium {
+  margin-left: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 4.8rem;
+  padding-top: 3.2rem;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 1.6rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .header {
+    padding-top: 2.4rem;
+    margin: 0 0 0 2.4rem;
+    width: 100vw;
+  }
+}
+.header .company_name {
+  color: hsl(0deg, 0%, 8%);
+  margin-right: 6.4rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.header .menu-box {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .menu-box {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+}
+.header .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+.header .nav-list_item:hover {
+  cursor: pointer;
+}
+.header .nav-list_item span {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.header .nav-list_item span:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+.header .nav-list .item-features:hover .drop-down-features {
+  display: block;
+}
+.header .nav-list .item-company:hover .drop-down-company {
+  display: block;
+}
+.header .auth_list {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  right: 0;
+  gap: 3.2rem;
+}
+.header .auth_list-item:hover {
+  cursor: pointer;
+}
+.header .auth_list-item.btn_login {
+  padding: 1rem 0;
+}
+.header .auth_list-item.btn_register {
+  padding: 1rem 1.7rem;
+  border: 2px solid hsl(0deg, 0%, 41%);
+  border-radius: 1.4rem;
+}
+.header .auth_list-item.btn_register:hover {
+  border-color: hsl(0deg, 0%, 8%);
+}
+@media only screen and (max-width: 37.5em) {
+  .header .nav-bar,
+.header .auth_list {
+    display: none;
+  }
+}
+
+.drop-down {
+  display: none;
+  position: absolute;
+  background: hsl(0deg, 0%, 98%);
+  border-radius: 0.8rem;
+  top: 3rem;
+  right: 0;
+  z-index: 200;
+  box-shadow: -5px 16px 48px rgba(20, 20, 20, 0.2);
+}
+.drop-down.drop-down-company {
+  right: -15%;
+}
+@media only screen and (max-width: 37.5em) {
+  .drop-down {
+    top: 1%;
+    left: 3%;
+    right: 3%;
+    border-radius: 1rem;
+  }
+}
+
+.d-list {
+  list-style-type: none;
+  padding: 2rem 1.6rem;
+}
+.d-list.d-list-company {
+  padding: 2.4rem 1.6rem;
+}
+.d-list .d-list_item {
+  display: flex;
+  gap: 1.2rem;
+}
+.d-list .d-list_item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.d-list .d-list_item .icon-box {
+  width: 1.2rem;
+}
+
+.grid {
+  display: grid;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media only screen and (max-width: 37.5em) {
+  .grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero-section {
+  margin-top: 6.4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .hero-section {
+    grid-row: 1/2;
+  }
+}
+.hero-img {
+  width: 100%;
+}
+@media only screen and (max-width: 37.5em) {
+  .hero-img-desktop {
+    display: none;
+  }
+}
+.hero-img-mobile {
+  display: none;
+}
+@media only screen and (max-width: 37.5em) {
+  .hero-img-mobile {
+    display: inline-block;
+  }
+}
+
+.details {
+  margin-top: 16rem;
+  padding-right: 9.6rem;
+}
+.details .description {
+  color: hsl(0deg, 0%, 41%);
+  line-height: 1.5;
+  padding: 4.8rem 6.4rem 3.2rem 0;
+}
+.details .btn_cta {
+  border: none;
+  border-radius: 1.2rem;
+  color: hsl(0deg, 0%, 98%);
+  background-color: hsl(0deg, 0%, 8%);
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+  margin: 2rem 0 0;
+}
+.details .btn_cta:hover {
+  cursor: pointer;
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+.details .featured_list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12.8rem;
+}
+
+.heading-primary {
+  font-weight: 700;
+  color: hsl(0deg, 0%, 8%);
+  font-size: 8rem;
+}
+.heading-primary span {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

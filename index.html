@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      content="minimum-scale=1"
+    />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="company_name">snap</div>
+      <div class="menu-box">
+        <img src="./images/icon-menu.svg" alt="menu icon" class="menu" />
+      </div>
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li class="nav-list_item item-features" style="position: relative">
+            <span>Features</span
+            ><span class="arrow-box"
+              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+            /></span>
+            <div id="feature-drop-down" class="drop-down drop-down-features">
+              <div class="popupcontent">
+                <ul class="d-list features_d-list">
+                  <li class="d-list_item">
+                    <div class="icon-box">
+                      <img
+                        src="./images/icon-todo.svg"
+                        alt="todo icon"
+                        class="feature_icon"
+                      />
+                    </div>
+                    <div>
+                      <p class="feature_name">Todo List</p>
+                    </div>
+                  </li>
+                  <li class="d-list_item">
+                    <div class="icon-box">
+                      <img
+                        src="./images/icon-calendar.svg"
+                        alt="Calendar icon"
+                        class="feature_icon"
+                      />
+                    </div>
+                    <div>
+                      <p class="feature_name">Calendar</p>
+                    </div>
+                  </li>
+                  <li class="d-list_item">
+                    <div class="icon-box">
+                      <img
+                        src="./images/icon-reminders.svg"
+                        alt="bell icon"
+                        class="feature_icon"
+                      />
+                    </div>
+                    <div>
+                      <p class="feature_name">Reminders</p>
+                    </div>
+                  </li>
+                  <li class="d-list_item">
+                    <div class="icon-box">
+                      <img
+                        src="./images/icon-planning.svg"
+                        alt="Planning icon"
+                        class="feature_icon"
+                      />
+                    </div>
+                    <div>
+                      <p class="feature_name">Planning</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-list_item item-company" style="position: relative">
+            <span>Company</span>
+            <span class="arrow-box"
+              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+            /></span>
+            <div id="company-drop-down" class="drop-down drop-down-company">
+              <div class="popupcontent">
+                <ul class="d-list d-list-company">
+                  <li class="d-list_item">
+                    <div>
+                      <p class="feature_name">History</p>
+                    </div>
+                  </li>
+                  <li class="d-list_item">
+                    <div>
+                      <p class="feature_name">Our Team</p>
+                    </div>
+                  </li>
+                  <li class="d-list_item">
+                    <div>
+                      <p class="feature_name">Blog</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="nav-list_item"><span>Careers</span></li>
+          <li class="nav-list_item"><span>About</span></li>
+        </ul>
+      </nav>
+      <ul class="auth_list">
+        <li class="auth_list-item btn_login">Login</li>
+        <li class="auth_list-item btn_register">Register</li>
+      </ul>
+    </header>
+    <main>
+      <div class="grid grid--2-cols">
+        <div class="details">
+          <h1 class="heading-primary">
+            <span class="word_first">Make</span>
+            <span class="word_second">remote work</span>
+          </h1>
+          <p class="description">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button class="btn_cta">Learn more</button>
+          <ul class="featured_list">
+            <li class="featured_list-item">
+              <img
+                src="./images/client-databiz.svg"
+                alt="databiz logo"
+                class="client-loge"
+              />
+            </li>
+            <li class="featured_list-item">
+              <img
+                src="./images/client-audiophile.svg"
+                alt="audiophile logo"
+                class="client-loge"
+              />
+            </li>
+            <li class="featured_list-item">
+              <img
+                src="./images/client-meet.svg"
+                alt="meet logo"
+                class="client-loge"
+              />
+            </li>
+            <li class="featured_list-item">
+              <img
+                src="./images/client-maker.svg"
+                alt="maker logo"
+                class="client-loge"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="hero-section">
+          <div class="hero-img-box">
+            <img
+              src="./images/image-hero-desktop.png"
+              alt="hero image"
+              class="hero-img hero-img-desktop"
+            />
+            <img
+              src="./images/image-hero-mobile.png"
+              alt="hero image"
+              class="hero-img hero-img-mobile"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
