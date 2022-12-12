@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  overflow-x: hidden;
 
   align-items: center;
   position: relative;
@@ -13,6 +12,7 @@
     padding: 2.4rem 0 0 2.4rem;
     width: 100vw;
     background-color: red;
+    overflow-x: hidden;
   }
   .company_name {
     color: $Almost-Black;
