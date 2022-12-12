@@ -17,6 +17,7 @@ body {
 }
 main {
   margin: 0 7% 10% 10%;
+  overflow-x: hidden;
   @include respond(phone) {
     margin: 0;
     background: yellow;
