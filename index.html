@@ -30,107 +30,91 @@
   </head>
   <body>
     <header class="header">
-      <div class="company_name">snap</div>
+      <div class="logo_box">
+        <img src="./images/logo.svg" alt="Logo" class="logo" />
+      </div>
       <div class="menu-box">
         <img src="./images/icon-menu.svg" alt="menu icon" class="menu" />
       </div>
-      <nav class="nav-bar">
-        <ul class="nav-list">
-          <li class="nav-list_item item-features" style="position: relative">
-            <span>Features</span
-            ><span class="arrow-box"
-              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
-            /></span>
-            <div id="feature-drop-down" class="drop-down drop-down-features">
-              <div class="popupcontent">
-                <ul class="d-list features_d-list">
-                  <li class="d-list_item">
-                    <div class="icon-box">
-                      <img
-                        src="./images/icon-todo.svg"
-                        alt="todo icon"
-                        class="feature_icon"
-                      />
-                    </div>
-                    <div>
-                      <p class="feature_name">Todo List</p>
-                    </div>
-                  </li>
-                  <li class="d-list_item">
-                    <div class="icon-box">
-                      <img
-                        src="./images/icon-calendar.svg"
-                        alt="Calendar icon"
-                        class="feature_icon"
-                      />
-                    </div>
-                    <div>
-                      <p class="feature_name">Calendar</p>
-                    </div>
-                  </li>
-                  <li class="d-list_item">
-                    <div class="icon-box">
-                      <img
-                        src="./images/icon-reminders.svg"
-                        alt="bell icon"
-                        class="feature_icon"
-                      />
-                    </div>
-                    <div>
-                      <p class="feature_name">Reminders</p>
-                    </div>
-                  </li>
-                  <li class="d-list_item">
-                    <div class="icon-box">
-                      <img
-                        src="./images/icon-planning.svg"
-                        alt="Planning icon"
-                        class="feature_icon"
-                      />
-                    </div>
-                    <div>
-                      <p class="feature_name">Planning</p>
-                    </div>
-                  </li>
-                </ul>
+      <nav class="nav-bar nav-list">
+        <div class="nav-list_item item-features" style="position: relative">
+          <span>Features</span
+          ><span class="arrow-box"
+            ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+          /></span>
+          <div id="feature-drop-down" class="drop-down drop-down-features">
+            <div class="popupcontent d-list features_d-list">
+              <div class="d-list_item">
+                <div class="icon-box">
+                  <img
+                    src="./images/icon-todo.svg"
+                    alt="todo icon"
+                    class="feature_icon"
+                  />
+                </div>
+                <div>
+                  <p class="feature_name">Todo List</p>
+                </div>
+              </div>
+              <div class="d-list_item">
+                <div class="icon-box">
+                  <img
+                    src="./images/icon-calendar.svg"
+                    alt="Calendar icon"
+                    class="feature_icon"
+                  />
+                </div>
+                <div>
+                  <p class="feature_name">Calendar</p>
+                </div>
+              </div>
+              <div class="d-list_item">
+                <div class="icon-box">
+                  <img
+                    src="./images/icon-reminders.svg"
+                    alt="bell icon"
+                    class="feature_icon"
+                  />
+                </div>
+                <div>
+                  <p class="feature_name">Reminders</p>
+                </div>
+              </div>
+              <div class="d-list_item">
+                <div class="icon-box">
+                  <img
+                    src="./images/icon-planning.svg"
+                    alt="Planning icon"
+                    class="feature_icon"
+                  />
+                </div>
+                <div>
+                  <p class="feature_name">Planning</p>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="nav-list_item item-company" style="position: relative">
-            <span>Company</span>
-            <span class="arrow-box"
-              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
-            /></span>
-            <div id="company-drop-down" class="drop-down drop-down-company">
-              <div class="popupcontent">
-                <ul class="d-list d-list-company">
-                  <li class="d-list_item">
-                    <div>
-                      <p class="feature_name">History</p>
-                    </div>
-                  </li>
-                  <li class="d-list_item">
-                    <div>
-                      <p class="feature_name">Our Team</p>
-                    </div>
-                  </li>
-                  <li class="d-list_item">
-                    <div>
-                      <p class="feature_name">Blog</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+          </div>
+        </div>
+        <div class="nav-list_item item-company" style="position: relative">
+          <span>Company</span>
+          <span class="arrow-box"
+            ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+          /></span>
+          <div id="company-drop-down" class="drop-down drop-down-company">
+            <div class="popupcontent d-list d-list-company">
+              <p class="d-list_item">History</p>
+              <p class="d-list_item">Our Team</p>
+              <p class="d-list_item">Blog</p>
             </div>
-          </li>
-          <li class="nav-list_item"><span>Careers</span></li>
-          <li class="nav-list_item"><span>About</span></li>
-        </ul>
+          </div>
+        </div>
+        <div class="nav-list_item"><span>Careers</span></div>
+        <div class="nav-list_item"><span>About</span></div>
       </nav>
-      <ul class="auth_list">
-        <li class="auth_list-item btn_login">Login</li>
-        <li class="auth_list-item btn_register">Register</li>
-      </ul>
+      <div class="auth_list">
+        <span class="auth_list-item btn_login">Login</span>
+        <span class="auth_list-item btn_register">Register</span>
+      </div>
     </header>
     <main>
       <div class="grid grid--2-cols">
@@ -144,36 +128,36 @@
             processes, create team rituals, and watch productivity soar.
           </p>
           <button class="btn_cta">Learn more</button>
-          <ul class="featured_list">
-            <li class="featured_list-item">
+          <div class="featured_list">
+            <span class="featured_list-item">
               <img
                 src="./images/client-databiz.svg"
                 alt="databiz logo"
-                class="client-loge"
+                class="client-logo"
               />
-            </li>
-            <li class="featured_list-item">
+            </span>
+            <span class="featured_list-item">
               <img
                 src="./images/client-audiophile.svg"
                 alt="audiophile logo"
-                class="client-loge"
+                class="client-logo"
               />
-            </li>
-            <li class="featured_list-item">
+            </span>
+            <span class="featured_list-item">
               <img
                 src="./images/client-meet.svg"
                 alt="meet logo"
-                class="client-loge"
+                class="client-logo"
               />
-            </li>
-            <li class="featured_list-item">
+            </span>
+            <span class="featured_list-item">
               <img
                 src="./images/client-maker.svg"
                 alt="maker logo"
-                class="client-loge"
+                class="client-logo"
               />
-            </li>
-          </ul>
+            </span>
+          </div>
         </div>
         <div class="hero-section">
           <div class="hero-img-box">
@@ -192,11 +176,11 @@
       </div>
     </main>
 
-    <!-- <div class="attribution">
+    <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+    </div>
   </body>
 </html>

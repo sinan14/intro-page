@@ -1,11 +1,9 @@
 .hero {
   &-section {
-    // background-image: url(../../images/image-hero-desktop.png);
-    // background-size: contain;
-    // background-repeat: no-repeat;
     margin-top: 6.4rem;
     @include respond(phone) {
       grid-row: 1/2;
+      margin-top: 2rem;
     }
   }
   &-img {
@@ -26,10 +24,21 @@
 .details {
   margin-top: 16rem;
   padding-right: 9.6rem;
+
+  @include respond(phone) {
+    margin-top: 4.8rem;
+    padding-right: 0;
+    text-align: center;
+  }
   .description {
     color: $Medium-Gray;
     line-height: 1.5;
     padding: 4.8rem 6.4rem 3.2rem 0;
+    @include respond(phone) {
+      padding: 2.4rem 1rem;
+      text-align: center;
+      font-size: 1.6rem;
+    }
   }
   .btn_cta {
     border: none;
@@ -46,19 +55,38 @@
       color: $Almost-Black;
       border: 1px solid $Almost-Black;
     }
+    @include respond(phone) {
+      margin-top: 0;
+      padding: 1.4rem 2.4rem;
+      font-size: 1.6rem;
+    }
   }
   .featured_list {
-    list-style: none;
     display: flex;
     justify-content: space-between;
     margin-top: 12.8rem;
+    @include respond(phone) {
+      margin: 3.2rem 0;
+      width: 100%;
+      padding: 0 10px;
+      .client-logo {
+        width: 80%;
+      }
+    }
   }
 }
 .heading-primary {
   font-weight: 700;
   color: $Almost-Black;
   font-size: 8rem;
+  @include respond(phone) {
+    font-size: 3.5rem;
+    text-align: center;
+  }
   span {
     display: block;
+    @include respond(phone) {
+      display: inline;
+    }
   }
 }

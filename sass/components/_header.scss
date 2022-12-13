@@ -10,26 +10,33 @@
     margin: 0;
     padding: 2.4rem 0 0 2.4rem;
     width: 100vw;
-    background-color: red;
     overflow-x: hidden;
   }
-  .company_name {
-    color: $Almost-Black;
-    margin-right: 6.4rem;
-    font-size: 3.2rem;
-    font-weight: 700;
+
+  .logo {
+    @include respond(phone) {
+      height: 3.2rem;
+    }
+    &_box {
+      padding-right: 64px;
+      display: flex;
+      align-items: center;
+      @include respond(phone) {
+        padding: 1rem 0 0 0;
+      }
+    }
   }
   .menu-box {
     display: none;
     @include respond(phone) {
       display: block;
       position: absolute;
-      right: 0;
+      right: 5%;
+      height: 2.2rem;
     }
   }
 
   .nav-list {
-    list-style: none;
     display: flex;
     gap: 2.4rem;
     &_item {
@@ -62,7 +69,6 @@
     }
   }
   .auth_list {
-    list-style: none;
     display: flex;
     position: absolute;
     right: 0;

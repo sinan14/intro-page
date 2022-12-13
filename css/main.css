@@ -31,6 +31,7 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 main {
@@ -40,7 +41,6 @@ main {
 @media only screen and (max-width: 37.5em) {
   main {
     margin: 0;
-    background: yellow;
   }
 }
 
@@ -72,15 +72,23 @@ body {
     margin: 0;
     padding: 2.4rem 0 0 2.4rem;
     width: 100vw;
-    background-color: red;
     overflow-x: hidden;
   }
 }
-.header .company_name {
-  color: hsl(0deg, 0%, 8%);
-  margin-right: 6.4rem;
-  font-size: 3.2rem;
-  font-weight: 700;
+@media only screen and (max-width: 37.5em) {
+  .header .logo {
+    height: 3.2rem;
+  }
+}
+.header .logo_box {
+  padding-right: 64px;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .logo_box {
+    padding: 1rem 0 0 0;
+  }
 }
 .header .menu-box {
   display: none;
@@ -89,11 +97,11 @@ body {
   .header .menu-box {
     display: block;
     position: absolute;
-    right: 0;
+    right: 5%;
+    height: 2.2rem;
   }
 }
 .header .nav-list {
-  list-style: none;
   display: flex;
   gap: 2.4rem;
 }
@@ -114,7 +122,6 @@ body {
   display: block;
 }
 .header .auth_list {
-  list-style: none;
   display: flex;
   position: absolute;
   right: 0;
@@ -164,7 +171,6 @@ body {
 }
 
 .d-list {
-  list-style-type: none;
   padding: 2rem 1.6rem;
 }
 .d-list.d-list-company {
@@ -199,6 +205,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .hero-section {
     grid-row: 1/2;
+    margin-top: 2rem;
   }
 }
 .hero-img {
@@ -222,10 +229,24 @@ body {
   margin-top: 16rem;
   padding-right: 9.6rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .details {
+    margin-top: 4.8rem;
+    padding-right: 0;
+    text-align: center;
+  }
+}
 .details .description {
   color: hsl(0deg, 0%, 41%);
   line-height: 1.5;
   padding: 4.8rem 6.4rem 3.2rem 0;
+}
+@media only screen and (max-width: 37.5em) {
+  .details .description {
+    padding: 2.4rem 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
 }
 .details .btn_cta {
   border: none;
@@ -243,11 +264,27 @@ body {
   color: hsl(0deg, 0%, 8%);
   border: 1px solid hsl(0deg, 0%, 8%);
 }
+@media only screen and (max-width: 37.5em) {
+  .details .btn_cta {
+    margin-top: 0;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.6rem;
+  }
+}
 .details .featured_list {
-  list-style: none;
   display: flex;
   justify-content: space-between;
   margin-top: 12.8rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .details .featured_list {
+    margin: 3.2rem 0;
+    width: 100%;
+    padding: 0 10px;
+  }
+  .details .featured_list .client-logo {
+    width: 80%;
+  }
 }
 
 .heading-primary {
@@ -255,6 +292,17 @@ body {
   color: hsl(0deg, 0%, 8%);
   font-size: 8rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .heading-primary {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+}
 .heading-primary span {
   display: block;
+}
+@media only screen and (max-width: 37.5em) {
+  .heading-primary span {
+    display: inline;
+  }
 }/*# sourceMappingURL=main.css.map */
