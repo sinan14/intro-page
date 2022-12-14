@@ -33,8 +33,112 @@
       <div class="logo_box">
         <img src="./images/logo.svg" alt="Logo" class="logo" />
       </div>
-      <div class="menu-box">
+      <div onclick="openNav()" class="menu-box">
         <img src="./images/icon-menu.svg" alt="menu icon" class="menu" />
+      </div>
+      <div id="mySidenav" class="sidenav">
+        <div onclick="closeNav()" class="close-icon-box">
+          <img
+            src="./images/icon-close-menu.svg"
+            alt="close icon"
+            class="close-icon"
+          />
+        </div>
+        <nav class="nav-bar nav-list">
+          <div
+            onclick="openFeatureDD()"
+            class="nav-list_item item-features hover-class"
+            style="position: relative"
+            id="features-side"
+          >
+            <span>Features</span
+            ><span class="arrow-box"
+              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+            /></span>
+            <div
+              id="feature-drop-down-side"
+              class="drop-down drop-down-features"
+            >
+              <div class="popupcontent d-list features_d-list">
+                <div class="d-list_item">
+                  <div class="icon-box">
+                    <img
+                      src="./images/icon-todo.svg"
+                      alt="todo icon"
+                      class="feature_icon"
+                    />
+                  </div>
+                  <div>
+                    <p class="feature_name">Todo List</p>
+                  </div>
+                </div>
+                <div class="d-list_item">
+                  <div class="icon-box">
+                    <img
+                      src="./images/icon-calendar.svg"
+                      alt="Calendar icon"
+                      class="feature_icon"
+                    />
+                  </div>
+                  <div>
+                    <p class="feature_name">Calendar</p>
+                  </div>
+                </div>
+                <div class="d-list_item">
+                  <div class="icon-box">
+                    <img
+                      src="./images/icon-reminders.svg"
+                      alt="bell icon"
+                      class="feature_icon"
+                    />
+                  </div>
+                  <div>
+                    <p class="feature_name">Reminders</p>
+                  </div>
+                </div>
+                <div class="d-list_item">
+                  <div class="icon-box">
+                    <img
+                      src="./images/icon-planning.svg"
+                      alt="Planning icon"
+                      class="feature_icon"
+                    />
+                  </div>
+                  <div>
+                    <p class="feature_name">Planning</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            onclick="openCompanyDD()"
+            id="company-side"
+            class="nav-list_item item-company hover-class"
+            style="position: relative"
+          >
+            <span>Company</span>
+            <span class="arrow-box"
+              ><img src="./images/icon-arrow-down.svg" alt="down-arrow-icon"
+            /></span>
+            <div
+              id="company-drop-down-side"
+              class="drop-down drop-down-company"
+            >
+              <div class="popupcontent d-list d-list-company">
+                <p class="d-list_item">History</p>
+                <p class="d-list_item">Our Team</p>
+                <p class="d-list_item">Blog</p>
+              </div>
+            </div>
+          </div>
+          <div class="nav-list_item"><span>Careers</span></div>
+          <div class="nav-list_item"><span>About</span></div>
+        </nav>
+        <div class="auth_list">
+          <span class="auth_list-item btn_login">Login</span>
+          <span class="auth_list-item btn_register">Register</span>
+        </div>
       </div>
       <nav class="nav-bar nav-list">
         <div class="nav-list_item item-features" style="position: relative">
@@ -182,5 +286,38 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "65%";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      function openFeatureDD() {
+        document
+          .getElementById("features-side")
+          .classList.remove("hover-class");
+        const ddStyle = document.getElementById("feature-drop-down-side").style;
+        if (!ddStyle.display || ddStyle.display === "none") {
+          ddStyle.display = "block";
+        } else {
+          ddStyle.display = "none";
+        }
+        document.getElementById("features-side").classList.toggle("active");
+      }
+      function openCompanyDD() {
+        document.getElementById("company-side").classList.remove("hover-class");
+        const ddStyle = document.getElementById("company-drop-down-side").style;
+        document.getElementById("company-side").classList.toggle("active");
+        console.log("dd style is", ddStyle.display);
+
+        if (!ddStyle.display || ddStyle.display === "none") {
+          ddStyle.display = "block";
+        } else {
+          ddStyle.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

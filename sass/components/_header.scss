@@ -39,13 +39,29 @@
   .nav-list {
     display: flex;
     gap: 2.4rem;
+    #features-side,
+    #company-side {
+      &.active {
+        .arrow-box img {
+          transform: rotate(180deg);
+        }
+      }
+    }
     &_item {
-      &:hover {
-        cursor: pointer;
+      &.hover-class {
+        &:hover {
+          cursor: pointer;
+          .arrow-box img {
+            transform: rotate(180deg);
+          }
+        }
       }
       span {
         display: inline-block;
         margin-right: 0.5rem;
+        @include respond(phone) {
+          margin-right: 1.2rem;
+        }
         &:hover {
           color: $Almost-Black;
         }

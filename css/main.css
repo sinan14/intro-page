@@ -105,12 +105,24 @@ body {
   display: flex;
   gap: 2.4rem;
 }
-.header .nav-list_item:hover {
+.header .nav-list #features-side.active .arrow-box img,
+.header .nav-list #company-side.active .arrow-box img {
+  transform: rotate(180deg);
+}
+.header .nav-list_item.hover-class:hover {
   cursor: pointer;
+}
+.header .nav-list_item.hover-class:hover .arrow-box img {
+  transform: rotate(180deg);
 }
 .header .nav-list_item span {
   display: inline-block;
   margin-right: 0.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .header .nav-list_item span {
+    margin-right: 1.2rem;
+  }
 }
 .header .nav-list_item span:hover {
   color: hsl(0deg, 0%, 8%);
@@ -163,10 +175,8 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .drop-down {
-    top: 1%;
-    left: 3%;
-    right: 3%;
-    border-radius: 1rem;
+    box-shadow: none;
+    position: static;
   }
 }
 
@@ -180,11 +190,57 @@ body {
   display: flex;
   gap: 1.2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .d-list .d-list_item {
+    gap: 1.8rem;
+  }
+}
 .d-list .d-list_item:not(:last-child) {
   margin-bottom: 1rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .d-list .d-list_item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
 .d-list .d-list_item .icon-box {
   width: 1.2rem;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: hsl(0deg, 0%, 98%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 9.6rem;
+}
+.sidenav .close-icon-box {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+.sidenav .nav-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+  font-size: 1.8rem;
+}
+.sidenav .auth_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: static;
+  gap: 1.2rem;
+  font-size: 1.8rem;
+  margin-top: 3.2rem;
+}
+.sidenav .auth_list .btn_register {
+  padding: 1.2rem 24%;
 }
 
 .grid {
