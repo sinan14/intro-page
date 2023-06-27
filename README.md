@@ -1,3 +1,5 @@
+# The project is live at
+https://front-end-mentor-works.github.io/intro-page/
 # Frontend Mentor - Intro section with dropdown navigation
 
 ![Design preview for the Intro section with dropdown navigation coding challenge](./design/desktop-preview.jpg)
